@@ -1,0 +1,19 @@
+/* 
+   scanditsdk.strings
+   ScanditSDKDemo
+
+   Copyright 2011 Mirasense AG. All rights reserved.
+ */
+
+"scanditsdk_init_message" = "Initialisiere Kamera...";
+"scanditsdk_initial_scan_screen_state" = "Strichcode ausrichten";
+"scanditsdk_barcode_presence_detected" = "Strichcode ausrichten...";
+"scanditsdk_barcode_decoding_in_progress" = "Decodiere...";
+"scanditsdk_no_barcode_was_recognized" = "Strichcode wurde nicht erkannt";
+"scanditsdk_suggest_manual_entry" = "Tap fuer Eingabe";
+"scanditsdk_use_most_likely_barcode" = "Tap um Strichcode zu bestätigen:";
+"scanditsdk_searchbar_action_button_caption" = "Los";
+"scanditsdk_searchbar_cancel_button_caption" = "Abbrechen";
+"scanditsdk_searchbar_placeholder" = "Strichcode scannen oder hier eingeben";
+"scanditsdk_toolbar_button_caption" = "Abbrechen";
+"scanditsdk_toolbar_buffer_caption" = "Abbrechen...";

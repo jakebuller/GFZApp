@@ -1,0 +1,256 @@
+
+Changes in Scandit SDK 2.2.7 January 18th 2012
+
+* Software update to resolve missing "beep" introduced in version 2.2.5. 
+
+Changes in Scandit SDK 2.2.6 January 14th 2012
+
+* Software update to resolve rare registration issues related to OpenUDID implementation. 
+
+* Software update to fix bug when switching from front to back camera by deallocating and reallocating ScanditSDKBarcodePicker. In the previous implementation, all configuration settings were lost. 
+
+Changes in Scandit SDK 2.2.5 December 19th 2012
+
+* Changed previous "greedy" implementation of the audio sound played when a successful 
+scan happened. We had reports that once the Scandit SDK was instantiated, it was no longer 
+possible to receive data from the audio port. 
+
+* Added support for GS1 QR codes. GS1 QR codes are now returned using the symbology 
+identifier GS1-QR. 
+
+* Fixed a bug related to the "Search Bar Cancel" button. Long button titles were previously shortened. In this new version, the size of the button is increased. 
+
+* Fixed a problem where the optional toolbar was sometimes placed at the wrong location.
+
+* Changed implementation of the ScanditSDKRotatingBarcodePicker in the demo project to only support the orientations set in the project settings.
+
+Changes in Scandit SDK 2.2.4 October 16th 2012
+
+* Important software update which addresses autofocus delay under iOS6. 
+The latest iOS6 release has a modified mechanism to trigger the autofocus 
+which is slower than the iOS5 implementation. We introduced our own algorithm 
+that triggers the autofocus more rapidly. 
+
+* Fixed bug in Code128 and Datamatrix implementation that did not correctly 
+decode GS1-128 and GS1-Datamatrix subtypes and used a misleading key for CODE128 in 
+the results dictionary.  
+IMPORTANT: Note that this bug fix has important implications if you 
+are using the Code-128 or Datamatrix barcoder decoder today (see note below).
+
+* Software update to address orientation issue under iOS6. In landscape mode 
+the camera image was not displayed correctly if the app did not lock the 
+orientation to portrait mode.  This is only relevant for applications that 
+operated in portrait and landscape mode and also enabled scanning in landscape 
+mode. 
+
+* Fixed bug in QR decoder that resulted in "Umlaut"-character not being 
+decoded correctly. 
+
+* Eliminated warning message in demo app after iOS6 update.
+
+* Adjusted size of UI in demo application for iPhone 5.
+
+IMPORTANT NOTE for Code128 and Datamatrix barcode users: 
+In previous versions, the Scandit SDK implementation disregarded the FC1 symbol. 
+As a result, developers could not detect that a particular Code128 was in effect
+ a GS1-128 code and/or the end of variable length fields of GS1-128 codes. 
+The same applies to GS1 Datamatrix codes. This new release of the Scandit SDK 
+now returns GS1-128 and GS1-Datamatrix codes with the keyword "GS1-128" and 
+"GS1-DATAMATRIX" respectively. Non-GS1 128 codes are returned as CODE128 (previously EAN128). 
+Variable length fields are terminated by ASCII symbol 29 ('GS'). If you 
+have previously used the keywords "CODE128" or "DATAMATRIX", you will
+ need to consider adjusting your code based on the above.  
+
+Changes in Scandit SDK 2.2.3 September 19th 2012
+
+* now contains an armv7s slice for the iPhone 5 and XCode 4.5.
+
+Changes in Scandit SDK 2.2.2 August 22nd 2012
+
+* critical bug fix for iphone 3G devices only - this bug was introduced in
+version 2.2.0 and results in an app crash when the barcode scanner is started on an iphone 3G device. 
+
+
+Changes in Scandit SDK 2.2.1 August 16th 2012
+
+* software update to improve decoding of long Code39/Code128 barcodes on iphone 3GS.
+
+* fixed a bug in the analytics implementation.
+
+Changes in Scandit SDK 2.2.0 July 18th 2012
+
+* new release types based on new Scandit SDK product offering (see www.scandit.com for details)
+
+* license key file is no longer needed - registration is now via app key only 
+
+* added support for Datamatrix codes (for Scandit SDK with enterprise premium package). This includes a number of new
+API methods that are relevant - in particular for tiny Datamatrix codes (see documentation in header files for details). 
+
+* minor bug fixes including better barcode performance for scanning vertical barcodes
+
+* deprecated method showMostLikelyBarcodeUIElement of ScanditSDKOverlayController 
+
+Changes in ScanditSDK 2.1.16 - July 5th 2012
+
+* improved ITF scan performance on the iPhone 4
+
+Changes in ScanditSDK 2.1.15 - June 26th 2012
+
+* fixed a bug in the registration/analytics implementation that was causing problems when device is in offline mode.
+
+* improved decoding of long ITF codes
+
+* enabled reading of Code39, Code128 and ITF barcodes upside down
+
+* reduced likelihood of false positive codes caused by Code39 and ITF decoder 
+
+Changes in ScanditSDK 2.1.14 - June 6th 2012
+
+* Reduced memory consumption of QR Code scanner
+
+* Improved EAN128 and Code39 decoding.
+
+* Fixed bug in method setMinSearchBarBarcodeLength which did not work correctly when it was set to 7 digits. 
+
+* Improved deallocation mechanism of ScanditSDKBarcodePicker object to prevent issues when picker is immediately restarted.
+
+Changes in ScanditSDK 2.1.13 - April 24th 2012
+
+* Software update to prevent namespace collisions after changes to UDID implementation in release 2.1.12
+
+* Bug fix to prevent rare app crashes when devices stayed offline for extended periods
+
+Changes in ScanditSDK 2.1.12 - April 12th 2012
+
+* Critical(!) software update to address Apple decision to no longer accept apps that use the UDID of the device. 
+
+* Software update that improves barcode decoding performance for small, short ITF barcodes
+
+* Software update that reduces memory footprint of Scandit SDK for ipod 4G touch devices
+
+Changes in ScanditSDK 2.1.11 - February 26th 2012
+
+* fixed minor bug when the front camera is used. The bug fix addresses a problem with the barcode highlighting and the adjustment of the scanning hotspot
+
+Changes in ScanditSDK 2.1.10 - February 16th 2012
+
+* replaced method call to setMinFrameRate which is deprecated in iOS5.0
+
+* fixed bug that left flashlight icon in the scan view in inconsistent state when the app was reactivated from 
+background or the scan view was dismissed and restarted
+
+* fixed bug that was resulting in incomplete resize of the scan view when orientation changed. This resulted in unclickable 
+areas within the scan view. 
+ 
+Changes in ScanditSDK 2.1.9 - January 24th 2012
+
+* fixed bug where the hotspot would not properly be set when switching between screen orientations
+
+* added possibility to use scaled scan view (example included in the DemoViewController class)
+
+* fixed bug that caused crash when front facing camera was deallocated and reallocated
+
+* changed frame capture delegate to allow for immediate re-invocation of frame capture method
+
+Changes in ScanditSDK 2.1.8 - January 8th 2012
+
+* added bug fix to scanalytics implementation that could cause problems when device remains offline for extended time
+
+* bug fix to front facing camera implementation
+
+Changes in ScanditSDK 2.1.7 - November 28th 2011
+
+* added support for front facing camera on ipad2 and iphone 4/4S - via additional constructor
+
+Changes in ScanditSDK 2.1.6 - November 16th 2011
+
+* fixed bug in scananalytics feature that was causing app crashes when location tracking was activated. 
+
+Changes in ScanditSDK 2.1.5 - October 27th 2011
+
+* fixed bug in torch implementation that led to torch not being shown on iPhone 4S
+
+Changes in ScanditSDK 2.1.4 - October 20th 2011
+
+* fixed critical bug which caused crash on new iPhone 4S 
+
+* fixed bug in memory deallocation of barcode picker that could cause memory access violations and app crashes
+
+Changes in ScanditSDK 2.1.3 - September 2nd 2011
+
+* fixed bug that showed recognized barcode in wrong position when Scandit SDK was embedded in landscape mode.
+
+* added example to Scandit SDK demo app on how to embed Scandit SDK in landscape mode.
+
+* modified poweredBy.png and poweredBy@2x.png images to support landscape scanning mode.
+
+* fixed bug in Scandit SDK demo app on ipad2 that has misaligned camera viewfinder size in the example that shows how to use embed SDK in a view by itself. 
+
+* minor change to the way the licensing file is being loaded. 
+
+* added method to API that lets developer switch torch on/off
+
+Changes in ScanditSDK 2.1.2 - August 17th 2011
+
+* fixed bug that prevented scanning of UPCE barcodes in revisions 2.1+
+
+* improved UPCE barcode recognition in blurry images
+
+* fixed bug in iphone demo that prevented proper operation of demo app under iOS 5 beta
+
+Changes in ScanditSDK 2.1.1 
+
+* fixed minor bug in unicode encoding of localized strings
+
+* added method to check whether barcode scanning is supported on device (and made frameworks that are available on iOS4.0+ only optional). This allows for the use of the Scandit SDK on devices without a camera and with iOS3.0 (barcode scanning itself will of course not work). 
+
+* added another example to demo app that shows how Scandit barcode scanning can be integrated into a simple UIView
+
+* adjusted size of rectangle highlighting successfully recognized barcode when viewfinder height has been adjusted by developer
+
+* reduced Scandit SDK size
+
+* fixed bug with license file opening when xcode project name contains whitespaces 
+
+
+Changes in ScanditSDK 2.1.0
+
+* added support for combined QR and 1D scanning
+
+* reduced the total size of the library significantly and eliminated the need to include the mirasense support files in the library
+
+* added support for adjusting the height of the window in which barcode are successfully recognized - this feature allows the user to select a particular barcode if there are multiple barcodes in close proximity.
+
+Changes in ScanditSDK 2.0.1
+
+* added method names to ScanditSDKOverlayController header that allow user to capture image from camera and provide more control over the UI (enable "scan flash", change viewfinder font size and dimensions.
+
+* fixed bug in "search bar" related customization methods 
+
+* fixed bug that prevented touch events reaching custom UI elements (buttons etc.) in a custom view controller inheriting from ScanditSDKOverlayController
+
+* fixed bug in license registration
+
+* improved error messaging
+
+* fixed bug in manual search bar implementation that was causing occasional app crash
+
+Changes in ScanditSDK 2.0.0
+
+* ScanDKBarcodePicker and ScanDKOverlayController have been renamed to ScanditSDKBarcodePicker and ScanditSDKOverlayController
+
+* ScanditDKOverlayController is no longer present in source code and does not need to be instantiated in the app. To customize the overlay, application developers can extend the ScanditDKOverlayController (as shown in the DemoScanViewController.mm) or use the new API methods of the ScanditSDKOverlayController (see ScanditSDKOverlayController.h). e.g. [scanditSDKBarcodePicker.overlayController showManualEntry:YES];
+
+* replaced the two folders ScanDKResources and ScanDK with single ScanditSDK folder
+
+* merged multiple static libraries into single library called libscanditsdk-<version>.a
+
+* added support for ITF symbology
+
+* added dummy library support for iphone simulator
+
+* added localization support (English, German) 
+
+
+
+

@@ -1,0 +1,689 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		721C127316FA27E8001E5CB9 /* GFZScanViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 721C127216FA27E8001E5CB9 /* GFZScanViewController.mm */; };
+		723EEF89170355ED00AF1D11 /* GFZVerifyAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 723EEF88170355ED00AF1D11 /* GFZVerifyAccountViewController.m */; };
+		7244962A16FA16C800DC4665 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7244962916FA16C800DC4665 /* UIKit.framework */; };
+		7244962C16FA16C800DC4665 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7244962B16FA16C800DC4665 /* Foundation.framework */; };
+		7244962E16FA16C800DC4665 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7244962D16FA16C800DC4665 /* CoreGraphics.framework */; };
+		7244963416FA16C800DC4665 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7244963216FA16C800DC4665 /* InfoPlist.strings */; };
+		7244963616FA16C900DC4665 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7244963516FA16C900DC4665 /* main.m */; };
+		7244963A16FA16C900DC4665 /* GFZAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7244963916FA16C900DC4665 /* GFZAppDelegate.m */; };
+		7244963C16FA16CA00DC4665 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 7244963B16FA16CA00DC4665 /* Default.png */; };
+		7244963E16FA16CA00DC4665 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7244963D16FA16CA00DC4665 /* Default@2x.png */; };
+		7244964016FA16CA00DC4665 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7244963F16FA16CA00DC4665 /* Default-568h@2x.png */; };
+		7244964316FA16CA00DC4665 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7244964116FA16CA00DC4665 /* MainStoryboard_iPhone.storyboard */; };
+		7244964616FA16CB00DC4665 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7244964416FA16CB00DC4665 /* MainStoryboard_iPad.storyboard */; };
+		7244964916FA16CB00DC4665 /* GFZLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7244964816FA16CB00DC4665 /* GFZLoginViewController.m */; };
+		7244965116FA16CB00DC4665 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7244965016FA16CB00DC4665 /* SenTestingKit.framework */; };
+		7244965216FA16CB00DC4665 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7244962916FA16C800DC4665 /* UIKit.framework */; };
+		7244965316FA16CB00DC4665 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7244962B16FA16C800DC4665 /* Foundation.framework */; };
+		7244965B16FA16CC00DC4665 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7244965916FA16CC00DC4665 /* InfoPlist.strings */; };
+		7244965E16FA16CC00DC4665 /* Gluten_Free_ZoneTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7244965D16FA16CC00DC4665 /* Gluten_Free_ZoneTests.m */; };
+		7244966816FA191300DC4665 /* test-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 7244966716FA191300DC4665 /* test-logo.png */; };
+		7244966B16FA197200DC4665 /* create-account.png in Resources */ = {isa = PBXBuildFile; fileRef = 7244966A16FA197200DC4665 /* create-account.png */; };
+		7244966D16FA198F00DC4665 /* sign-ing.png in Resources */ = {isa = PBXBuildFile; fileRef = 7244966C16FA198F00DC4665 /* sign-ing.png */; };
+		7244967016FA20C700DC4665 /* GFZCreateAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7244966F16FA20C700DC4665 /* GFZCreateAccountViewController.m */; };
+		7254C2C0170490700029FF00 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 7254C2BF170490700029FF00 /* Reachability.m */; };
+		7254C2C1170490700029FF00 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 7254C2BF170490700029FF00 /* Reachability.m */; };
+		72799150170223F300B64211 /* Question-Mark.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7279914F170223F300B64211 /* Question-Mark.jpg */; };
+		72A5110916FCB537003F5A3F /* GFZMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72A5110816FCB537003F5A3F /* GFZMainViewController.m */; };
+		72A5110D16FCB718003F5A3F /* GFZHistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72A5110C16FCB718003F5A3F /* GFZHistoryViewController.m */; };
+		72A5114216FCC72F003F5A3F /* beep.wav in Resources */ = {isa = PBXBuildFile; fileRef = 72A5113216FCC72F003F5A3F /* beep.wav */; };
+		72A5114316FCC72F003F5A3F /* CHANGELOG.txt in Resources */ = {isa = PBXBuildFile; fileRef = 72A5113316FCC72F003F5A3F /* CHANGELOG.txt */; };
+		72A5114416FCC72F003F5A3F /* scanditsdk.strings in Resources */ = {isa = PBXBuildFile; fileRef = 72A5113416FCC72F003F5A3F /* scanditsdk.strings */; };
+		72A5114516FCC72F003F5A3F /* empty.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 72A5113616FCC72F003F5A3F /* empty.cpp */; };
+		72A5114616FCC72F003F5A3F /* flashlight-turn-off-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 72A5113816FCC72F003F5A3F /* flashlight-turn-off-icon.png */; };
+		72A5114716FCC72F003F5A3F /* flashlight-turn-off-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 72A5113916FCC72F003F5A3F /* flashlight-turn-off-icon@2x.png */; };
+		72A5114816FCC72F003F5A3F /* flashlight-turn-on-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 72A5113A16FCC72F003F5A3F /* flashlight-turn-on-icon.png */; };
+		72A5114916FCC72F003F5A3F /* flashlight-turn-on-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 72A5113B16FCC72F003F5A3F /* flashlight-turn-on-icon@2x.png */; };
+		72A5114A16FCC72F003F5A3F /* libscanditsdk-iphone-2.2.7.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 72A5113C16FCC72F003F5A3F /* libscanditsdk-iphone-2.2.7.a */; };
+		72A5114B16FCC72F003F5A3F /* LICENSE-2.0.txt in Resources */ = {isa = PBXBuildFile; fileRef = 72A5113D16FCC72F003F5A3F /* LICENSE-2.0.txt */; };
+		72A5114C16FCC72F003F5A3F /* poweredby.png in Resources */ = {isa = PBXBuildFile; fileRef = 72A5113E16FCC72F003F5A3F /* poweredby.png */; };
+		72A5114D16FCC72F003F5A3F /* poweredby@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 72A5113F16FCC72F003F5A3F /* poweredby@2x.png */; };
+		72A5114F16FCC7C6003F5A3F /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 72A5114E16FCC7C6003F5A3F /* libiconv.dylib */; };
+		72A5115116FCC7D5003F5A3F /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 72A5115016FCC7D5003F5A3F /* libz.dylib */; };
+		72A5115316FCC7F9003F5A3F /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72A5115216FCC7F9003F5A3F /* CoreVideo.framework */; };
+		72A5115516FCC81C003F5A3F /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72A5115416FCC81B003F5A3F /* AudioToolbox.framework */; };
+		72A5115716FCC823003F5A3F /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72A5115616FCC822003F5A3F /* AVFoundation.framework */; };
+		72A5115916FCC82B003F5A3F /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72A5115816FCC82B003F5A3F /* CoreMedia.framework */; };
+		72A5115B16FCC833003F5A3F /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72A5115A16FCC833003F5A3F /* QuartzCore.framework */; };
+		72A5115D16FCC83A003F5A3F /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72A5115C16FCC83A003F5A3F /* SystemConfiguration.framework */; };
+		72E2D6BD1700A6A80051F636 /* history-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 72E2D6BC1700A6A80051F636 /* history-icon.png */; };
+		72E2D6C01700A6AC0051F636 /* scan-con.png in Resources */ = {isa = PBXBuildFile; fileRef = 72E2D6BF1700A6AC0051F636 /* scan-con.png */; };
+		72E2D6C21700A6E40051F636 /* new-scan.png in Resources */ = {isa = PBXBuildFile; fileRef = 72E2D6C11700A6E40051F636 /* new-scan.png */; };
+		72E2D6C41700AD860051F636 /* x.png in Resources */ = {isa = PBXBuildFile; fileRef = 72E2D6C31700AD860051F636 /* x.png */; };
+		72E2D6C61700AD880051F636 /* check.png in Resources */ = {isa = PBXBuildFile; fileRef = 72E2D6C51700AD880051F636 /* check.png */; };
+		72E2D6C81700B5C60051F636 /* new-scan-red.png in Resources */ = {isa = PBXBuildFile; fileRef = 72E2D6C71700B5C60051F636 /* new-scan-red.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7244965416FA16CC00DC4665 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7244961C16FA16C800DC4665 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7244962416FA16C800DC4665;
+			remoteInfo = "Gluten Free Zone";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		721C127116FA27E8001E5CB9 /* GFZScanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GFZScanViewController.h; sourceTree = "<group>"; };
+		721C127216FA27E8001E5CB9 /* GFZScanViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GFZScanViewController.mm; sourceTree = "<group>"; };
+		723EEF87170355ED00AF1D11 /* GFZVerifyAccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GFZVerifyAccountViewController.h; sourceTree = "<group>"; };
+		723EEF88170355ED00AF1D11 /* GFZVerifyAccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GFZVerifyAccountViewController.m; sourceTree = "<group>"; };
+		7244962516FA16C800DC4665 /* Gluten Free Zone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Gluten Free Zone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7244962916FA16C800DC4665 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		7244962B16FA16C800DC4665 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		7244962D16FA16C800DC4665 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		7244963116FA16C800DC4665 /* Gluten Free Zone-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Gluten Free Zone-Info.plist"; sourceTree = "<group>"; };
+		7244963316FA16C800DC4665 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		7244963516FA16C900DC4665 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		7244963716FA16C900DC4665 /* Gluten Free Zone-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Gluten Free Zone-Prefix.pch"; sourceTree = "<group>"; };
+		7244963816FA16C900DC4665 /* GFZAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GFZAppDelegate.h; sourceTree = "<group>"; };
+		7244963916FA16C900DC4665 /* GFZAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GFZAppDelegate.m; sourceTree = "<group>"; };
+		7244963B16FA16CA00DC4665 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		7244963D16FA16CA00DC4665 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		7244963F16FA16CA00DC4665 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		7244964216FA16CA00DC4665 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		7244964516FA16CB00DC4665 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
+		7244964716FA16CB00DC4665 /* GFZLoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GFZLoginViewController.h; sourceTree = "<group>"; };
+		7244964816FA16CB00DC4665 /* GFZLoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GFZLoginViewController.m; sourceTree = "<group>"; };
+		7244964F16FA16CB00DC4665 /* Gluten Free ZoneTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Gluten Free ZoneTests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7244965016FA16CB00DC4665 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		7244965816FA16CC00DC4665 /* Gluten Free ZoneTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Gluten Free ZoneTests-Info.plist"; sourceTree = "<group>"; };
+		7244965A16FA16CC00DC4665 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		7244965C16FA16CC00DC4665 /* Gluten_Free_ZoneTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Gluten_Free_ZoneTests.h; sourceTree = "<group>"; };
+		7244965D16FA16CC00DC4665 /* Gluten_Free_ZoneTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Gluten_Free_ZoneTests.m; sourceTree = "<group>"; };
+		7244966716FA191300DC4665 /* test-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "test-logo.png"; sourceTree = "<group>"; };
+		7244966A16FA197200DC4665 /* create-account.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "create-account.png"; sourceTree = "<group>"; };
+		7244966C16FA198F00DC4665 /* sign-ing.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sign-ing.png"; sourceTree = "<group>"; };
+		7244966E16FA20C700DC4665 /* GFZCreateAccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GFZCreateAccountViewController.h; sourceTree = "<group>"; };
+		7244966F16FA20C700DC4665 /* GFZCreateAccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GFZCreateAccountViewController.m; sourceTree = "<group>"; };
+		7254C2BE170490700029FF00 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		7254C2BF170490700029FF00 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		7279914F170223F300B64211 /* Question-Mark.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Question-Mark.jpg"; sourceTree = "<group>"; };
+		72A5110716FCB537003F5A3F /* GFZMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GFZMainViewController.h; sourceTree = "<group>"; };
+		72A5110816FCB537003F5A3F /* GFZMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GFZMainViewController.m; sourceTree = "<group>"; };
+		72A5110B16FCB718003F5A3F /* GFZHistoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GFZHistoryViewController.h; sourceTree = "<group>"; };
+		72A5110C16FCB718003F5A3F /* GFZHistoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GFZHistoryViewController.m; sourceTree = "<group>"; };
+		72A5113216FCC72F003F5A3F /* beep.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = beep.wav; sourceTree = "<group>"; };
+		72A5113316FCC72F003F5A3F /* CHANGELOG.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CHANGELOG.txt; sourceTree = "<group>"; };
+		72A5113516FCC72F003F5A3F /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/scanditsdk.strings; sourceTree = "<group>"; };
+		72A5113616FCC72F003F5A3F /* empty.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = empty.cpp; sourceTree = "<group>"; };
+		72A5113716FCC72F003F5A3F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/scanditsdk.strings; sourceTree = "<group>"; };
+		72A5113816FCC72F003F5A3F /* flashlight-turn-off-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "flashlight-turn-off-icon.png"; sourceTree = "<group>"; };
+		72A5113916FCC72F003F5A3F /* flashlight-turn-off-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "flashlight-turn-off-icon@2x.png"; sourceTree = "<group>"; };
+		72A5113A16FCC72F003F5A3F /* flashlight-turn-on-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "flashlight-turn-on-icon.png"; sourceTree = "<group>"; };
+		72A5113B16FCC72F003F5A3F /* flashlight-turn-on-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "flashlight-turn-on-icon@2x.png"; sourceTree = "<group>"; };
+		72A5113C16FCC72F003F5A3F /* libscanditsdk-iphone-2.2.7.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libscanditsdk-iphone-2.2.7.a"; sourceTree = "<group>"; };
+		72A5113D16FCC72F003F5A3F /* LICENSE-2.0.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "LICENSE-2.0.txt"; sourceTree = "<group>"; };
+		72A5113E16FCC72F003F5A3F /* poweredby.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = poweredby.png; sourceTree = "<group>"; };
+		72A5113F16FCC72F003F5A3F /* poweredby@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "poweredby@2x.png"; sourceTree = "<group>"; };
+		72A5114016FCC72F003F5A3F /* ScanditSDKBarcodePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScanditSDKBarcodePicker.h; sourceTree = "<group>"; };
+		72A5114116FCC72F003F5A3F /* ScanditSDKOverlayController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScanditSDKOverlayController.h; sourceTree = "<group>"; };
+		72A5114E16FCC7C6003F5A3F /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = usr/lib/libiconv.dylib; sourceTree = SDKROOT; };
+		72A5115016FCC7D5003F5A3F /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		72A5115216FCC7F9003F5A3F /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		72A5115416FCC81B003F5A3F /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		72A5115616FCC822003F5A3F /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		72A5115816FCC82B003F5A3F /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		72A5115A16FCC833003F5A3F /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		72A5115C16FCC83A003F5A3F /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		72E2D6BC1700A6A80051F636 /* history-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "history-icon.png"; sourceTree = "<group>"; };
+		72E2D6BF1700A6AC0051F636 /* scan-con.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "scan-con.png"; sourceTree = "<group>"; };
+		72E2D6C11700A6E40051F636 /* new-scan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "new-scan.png"; sourceTree = "<group>"; };
+		72E2D6C31700AD860051F636 /* x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = x.png; sourceTree = "<group>"; };
+		72E2D6C51700AD880051F636 /* check.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = check.png; sourceTree = "<group>"; };
+		72E2D6C71700B5C60051F636 /* new-scan-red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "new-scan-red.png"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7244962216FA16C800DC4665 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				72A5115D16FCC83A003F5A3F /* SystemConfiguration.framework in Frameworks */,
+				72A5115B16FCC833003F5A3F /* QuartzCore.framework in Frameworks */,
+				72A5115916FCC82B003F5A3F /* CoreMedia.framework in Frameworks */,
+				72A5115716FCC823003F5A3F /* AVFoundation.framework in Frameworks */,
+				72A5115516FCC81C003F5A3F /* AudioToolbox.framework in Frameworks */,
+				7244962E16FA16C800DC4665 /* CoreGraphics.framework in Frameworks */,
+				7244962C16FA16C800DC4665 /* Foundation.framework in Frameworks */,
+				7244962A16FA16C800DC4665 /* UIKit.framework in Frameworks */,
+				72A5115316FCC7F9003F5A3F /* CoreVideo.framework in Frameworks */,
+				72A5115116FCC7D5003F5A3F /* libz.dylib in Frameworks */,
+				72A5114F16FCC7C6003F5A3F /* libiconv.dylib in Frameworks */,
+				72A5114A16FCC72F003F5A3F /* libscanditsdk-iphone-2.2.7.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7244964B16FA16CB00DC4665 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7244965116FA16CB00DC4665 /* SenTestingKit.framework in Frameworks */,
+				7244965216FA16CB00DC4665 /* UIKit.framework in Frameworks */,
+				7244965316FA16CB00DC4665 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7244961A16FA16C800DC4665 = {
+			isa = PBXGroup;
+			children = (
+				72A5115C16FCC83A003F5A3F /* SystemConfiguration.framework */,
+				72A5115A16FCC833003F5A3F /* QuartzCore.framework */,
+				72A5115816FCC82B003F5A3F /* CoreMedia.framework */,
+				72A5115616FCC822003F5A3F /* AVFoundation.framework */,
+				72A5115416FCC81B003F5A3F /* AudioToolbox.framework */,
+				72A5115216FCC7F9003F5A3F /* CoreVideo.framework */,
+				72A5115016FCC7D5003F5A3F /* libz.dylib */,
+				72A5114E16FCC7C6003F5A3F /* libiconv.dylib */,
+				72A5113116FCC72F003F5A3F /* ScanditSDK */,
+				7244962F16FA16C800DC4665 /* Gluten Free Zone */,
+				7244965616FA16CC00DC4665 /* Gluten Free ZoneTests */,
+				7244962816FA16C800DC4665 /* Frameworks */,
+				7244962616FA16C800DC4665 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7244962616FA16C800DC4665 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7244962516FA16C800DC4665 /* Gluten Free Zone.app */,
+				7244964F16FA16CB00DC4665 /* Gluten Free ZoneTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7244962816FA16C800DC4665 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7244962916FA16C800DC4665 /* UIKit.framework */,
+				7244962B16FA16C800DC4665 /* Foundation.framework */,
+				7244962D16FA16C800DC4665 /* CoreGraphics.framework */,
+				7244965016FA16CB00DC4665 /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7244962F16FA16C800DC4665 /* Gluten Free Zone */ = {
+			isa = PBXGroup;
+			children = (
+				7254C2BE170490700029FF00 /* Reachability.h */,
+				7254C2BF170490700029FF00 /* Reachability.m */,
+				7244966916FA191900DC4665 /* images */,
+				7244963816FA16C900DC4665 /* GFZAppDelegate.h */,
+				7244963916FA16C900DC4665 /* GFZAppDelegate.m */,
+				7244964116FA16CA00DC4665 /* MainStoryboard_iPhone.storyboard */,
+				723EEF87170355ED00AF1D11 /* GFZVerifyAccountViewController.h */,
+				723EEF88170355ED00AF1D11 /* GFZVerifyAccountViewController.m */,
+				72A5110B16FCB718003F5A3F /* GFZHistoryViewController.h */,
+				72A5110C16FCB718003F5A3F /* GFZHistoryViewController.m */,
+				721C127116FA27E8001E5CB9 /* GFZScanViewController.h */,
+				721C127216FA27E8001E5CB9 /* GFZScanViewController.mm */,
+				7244966E16FA20C700DC4665 /* GFZCreateAccountViewController.h */,
+				72A5110716FCB537003F5A3F /* GFZMainViewController.h */,
+				72A5110816FCB537003F5A3F /* GFZMainViewController.m */,
+				7244966F16FA20C700DC4665 /* GFZCreateAccountViewController.m */,
+				7244964416FA16CB00DC4665 /* MainStoryboard_iPad.storyboard */,
+				7244964716FA16CB00DC4665 /* GFZLoginViewController.h */,
+				7244964816FA16CB00DC4665 /* GFZLoginViewController.m */,
+				7244963016FA16C800DC4665 /* Supporting Files */,
+			);
+			path = "Gluten Free Zone";
+			sourceTree = "<group>";
+		};
+		7244963016FA16C800DC4665 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7244963116FA16C800DC4665 /* Gluten Free Zone-Info.plist */,
+				7244963216FA16C800DC4665 /* InfoPlist.strings */,
+				7244963516FA16C900DC4665 /* main.m */,
+				7244963716FA16C900DC4665 /* Gluten Free Zone-Prefix.pch */,
+				7244963B16FA16CA00DC4665 /* Default.png */,
+				7244963D16FA16CA00DC4665 /* Default@2x.png */,
+				7244963F16FA16CA00DC4665 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7244965616FA16CC00DC4665 /* Gluten Free ZoneTests */ = {
+			isa = PBXGroup;
+			children = (
+				7244965C16FA16CC00DC4665 /* Gluten_Free_ZoneTests.h */,
+				7244965D16FA16CC00DC4665 /* Gluten_Free_ZoneTests.m */,
+				7244965716FA16CC00DC4665 /* Supporting Files */,
+			);
+			path = "Gluten Free ZoneTests";
+			sourceTree = "<group>";
+		};
+		7244965716FA16CC00DC4665 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7244965816FA16CC00DC4665 /* Gluten Free ZoneTests-Info.plist */,
+				7244965916FA16CC00DC4665 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7244966916FA191900DC4665 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				7279914F170223F300B64211 /* Question-Mark.jpg */,
+				72E2D6C71700B5C60051F636 /* new-scan-red.png */,
+				72E2D6C51700AD880051F636 /* check.png */,
+				72E2D6C31700AD860051F636 /* x.png */,
+				72E2D6C11700A6E40051F636 /* new-scan.png */,
+				72E2D6BF1700A6AC0051F636 /* scan-con.png */,
+				72E2D6BC1700A6A80051F636 /* history-icon.png */,
+				7244966C16FA198F00DC4665 /* sign-ing.png */,
+				7244966A16FA197200DC4665 /* create-account.png */,
+				7244966716FA191300DC4665 /* test-logo.png */,
+			);
+			name = images;
+			sourceTree = "<group>";
+		};
+		72A5113116FCC72F003F5A3F /* ScanditSDK */ = {
+			isa = PBXGroup;
+			children = (
+				72A5113216FCC72F003F5A3F /* beep.wav */,
+				72A5113316FCC72F003F5A3F /* CHANGELOG.txt */,
+				72A5113416FCC72F003F5A3F /* scanditsdk.strings */,
+				72A5113616FCC72F003F5A3F /* empty.cpp */,
+				72A5113816FCC72F003F5A3F /* flashlight-turn-off-icon.png */,
+				72A5113916FCC72F003F5A3F /* flashlight-turn-off-icon@2x.png */,
+				72A5113A16FCC72F003F5A3F /* flashlight-turn-on-icon.png */,
+				72A5113B16FCC72F003F5A3F /* flashlight-turn-on-icon@2x.png */,
+				72A5113C16FCC72F003F5A3F /* libscanditsdk-iphone-2.2.7.a */,
+				72A5113D16FCC72F003F5A3F /* LICENSE-2.0.txt */,
+				72A5113E16FCC72F003F5A3F /* poweredby.png */,
+				72A5113F16FCC72F003F5A3F /* poweredby@2x.png */,
+				72A5114016FCC72F003F5A3F /* ScanditSDKBarcodePicker.h */,
+				72A5114116FCC72F003F5A3F /* ScanditSDKOverlayController.h */,
+			);
+			path = ScanditSDK;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7244962416FA16C800DC4665 /* Gluten Free Zone */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7244966116FA16CC00DC4665 /* Build configuration list for PBXNativeTarget "Gluten Free Zone" */;
+			buildPhases = (
+				7244962116FA16C800DC4665 /* Sources */,
+				7244962216FA16C800DC4665 /* Frameworks */,
+				7244962316FA16C800DC4665 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Gluten Free Zone";
+			productName = "Gluten Free Zone";
+			productReference = 7244962516FA16C800DC4665 /* Gluten Free Zone.app */;
+			productType = "com.apple.product-type.application";
+		};
+		7244964E16FA16CB00DC4665 /* Gluten Free ZoneTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7244966416FA16CC00DC4665 /* Build configuration list for PBXNativeTarget "Gluten Free ZoneTests" */;
+			buildPhases = (
+				7244964A16FA16CB00DC4665 /* Sources */,
+				7244964B16FA16CB00DC4665 /* Frameworks */,
+				7244964C16FA16CB00DC4665 /* Resources */,
+				7244964D16FA16CB00DC4665 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7244965516FA16CC00DC4665 /* PBXTargetDependency */,
+			);
+			name = "Gluten Free ZoneTests";
+			productName = "Gluten Free ZoneTests";
+			productReference = 7244964F16FA16CB00DC4665 /* Gluten Free ZoneTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7244961C16FA16C800DC4665 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = GFZ;
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = "P & C";
+			};
+			buildConfigurationList = 7244961F16FA16C800DC4665 /* Build configuration list for PBXProject "Gluten Free Zone" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				de,
+			);
+			mainGroup = 7244961A16FA16C800DC4665;
+			productRefGroup = 7244962616FA16C800DC4665 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7244962416FA16C800DC4665 /* Gluten Free Zone */,
+				7244964E16FA16CB00DC4665 /* Gluten Free ZoneTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7244962316FA16C800DC4665 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7244963416FA16C800DC4665 /* InfoPlist.strings in Resources */,
+				7244963C16FA16CA00DC4665 /* Default.png in Resources */,
+				7244963E16FA16CA00DC4665 /* Default@2x.png in Resources */,
+				7244964016FA16CA00DC4665 /* Default-568h@2x.png in Resources */,
+				7244964316FA16CA00DC4665 /* MainStoryboard_iPhone.storyboard in Resources */,
+				7244964616FA16CB00DC4665 /* MainStoryboard_iPad.storyboard in Resources */,
+				7244966816FA191300DC4665 /* test-logo.png in Resources */,
+				7244966B16FA197200DC4665 /* create-account.png in Resources */,
+				7244966D16FA198F00DC4665 /* sign-ing.png in Resources */,
+				72A5114216FCC72F003F5A3F /* beep.wav in Resources */,
+				72A5114316FCC72F003F5A3F /* CHANGELOG.txt in Resources */,
+				72A5114416FCC72F003F5A3F /* scanditsdk.strings in Resources */,
+				72A5114616FCC72F003F5A3F /* flashlight-turn-off-icon.png in Resources */,
+				72A5114716FCC72F003F5A3F /* flashlight-turn-off-icon@2x.png in Resources */,
+				72A5114816FCC72F003F5A3F /* flashlight-turn-on-icon.png in Resources */,
+				72A5114916FCC72F003F5A3F /* flashlight-turn-on-icon@2x.png in Resources */,
+				72A5114B16FCC72F003F5A3F /* LICENSE-2.0.txt in Resources */,
+				72A5114C16FCC72F003F5A3F /* poweredby.png in Resources */,
+				72A5114D16FCC72F003F5A3F /* poweredby@2x.png in Resources */,
+				72E2D6BD1700A6A80051F636 /* history-icon.png in Resources */,
+				72E2D6C01700A6AC0051F636 /* scan-con.png in Resources */,
+				72E2D6C21700A6E40051F636 /* new-scan.png in Resources */,
+				72E2D6C41700AD860051F636 /* x.png in Resources */,
+				72E2D6C61700AD880051F636 /* check.png in Resources */,
+				72E2D6C81700B5C60051F636 /* new-scan-red.png in Resources */,
+				72799150170223F300B64211 /* Question-Mark.jpg in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7244964C16FA16CB00DC4665 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7244965B16FA16CC00DC4665 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7244964D16FA16CB00DC4665 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7244962116FA16C800DC4665 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7244963616FA16C900DC4665 /* main.m in Sources */,
+				7244963A16FA16C900DC4665 /* GFZAppDelegate.m in Sources */,
+				7244964916FA16CB00DC4665 /* GFZLoginViewController.m in Sources */,
+				7244967016FA20C700DC4665 /* GFZCreateAccountViewController.m in Sources */,
+				721C127316FA27E8001E5CB9 /* GFZScanViewController.mm in Sources */,
+				72A5110916FCB537003F5A3F /* GFZMainViewController.m in Sources */,
+				72A5110D16FCB718003F5A3F /* GFZHistoryViewController.m in Sources */,
+				72A5114516FCC72F003F5A3F /* empty.cpp in Sources */,
+				723EEF89170355ED00AF1D11 /* GFZVerifyAccountViewController.m in Sources */,
+				7254C2C0170490700029FF00 /* Reachability.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7244964A16FA16CB00DC4665 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7244965E16FA16CC00DC4665 /* Gluten_Free_ZoneTests.m in Sources */,
+				7254C2C1170490700029FF00 /* Reachability.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7244965516FA16CC00DC4665 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7244962416FA16C800DC4665 /* Gluten Free Zone */;
+			targetProxy = 7244965416FA16CC00DC4665 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		7244963216FA16C800DC4665 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7244963316FA16C800DC4665 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		7244964116FA16CA00DC4665 /* MainStoryboard_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7244964216FA16CA00DC4665 /* en */,
+			);
+			name = MainStoryboard_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		7244964416FA16CB00DC4665 /* MainStoryboard_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7244964516FA16CB00DC4665 /* en */,
+			);
+			name = MainStoryboard_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		7244965916FA16CC00DC4665 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7244965A16FA16CC00DC4665 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		72A5113416FCC72F003F5A3F /* scanditsdk.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				72A5113516FCC72F003F5A3F /* de */,
+				72A5113716FCC72F003F5A3F /* en */,
+			);
+			name = scanditsdk.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7244965F16FA16CC00DC4665 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7244966016FA16CC00DC4665 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7244966216FA16CC00DC4665 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LIBRARY = "libstdc++";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Gluten Free Zone/Gluten Free Zone-Prefix.pch";
+				"HEADER_SEARCH_PATHS[arch=*]" = "";
+				INFOPLIST_FILE = "Gluten Free Zone/Gluten Free Zone-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/ScanditSDK\"",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		7244966316FA16CC00DC4665 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LIBRARY = "libstdc++";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Gluten Free Zone/Gluten Free Zone-Prefix.pch";
+				INFOPLIST_FILE = "Gluten Free Zone/Gluten Free Zone-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/ScanditSDK\"",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		7244966516FA16CC00DC4665 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Gluten Free Zone.app/Gluten Free Zone";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Gluten Free Zone/Gluten Free Zone-Prefix.pch";
+				INFOPLIST_FILE = "Gluten Free ZoneTests/Gluten Free ZoneTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		7244966616FA16CC00DC4665 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Gluten Free Zone.app/Gluten Free Zone";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Gluten Free Zone/Gluten Free Zone-Prefix.pch";
+				INFOPLIST_FILE = "Gluten Free ZoneTests/Gluten Free ZoneTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7244961F16FA16C800DC4665 /* Build configuration list for PBXProject "Gluten Free Zone" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7244965F16FA16CC00DC4665 /* Debug */,
+				7244966016FA16CC00DC4665 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7244966116FA16CC00DC4665 /* Build configuration list for PBXNativeTarget "Gluten Free Zone" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7244966216FA16CC00DC4665 /* Debug */,
+				7244966316FA16CC00DC4665 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7244966416FA16CC00DC4665 /* Build configuration list for PBXNativeTarget "Gluten Free ZoneTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7244966516FA16CC00DC4665 /* Debug */,
+				7244966616FA16CC00DC4665 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7244961C16FA16C800DC4665 /* Project object */;
+}
