@@ -84,7 +84,7 @@
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard_iPhone" bundle:nil];
     UITabBarController *viewController = [storyboard instantiateViewControllerWithIdentifier:@"CreateAccountView"];
     
-    [self.navigationController pushViewController:viewController animated:YES];
+    [self.navigationController presentModalViewController:viewController animated:YES];
 }
 
 - (void)viewDidUnload {

@@ -8,7 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
-@interface GFZCreateAccountViewController : UIViewController
-- (IBAction)Close:(id)sender;
+@interface GFZCreateAccountViewController : UIViewController <UITextFieldDelegate>
+- (IBAction)CancelButton:(id)sender;
+@property (weak, nonatomic) IBOutlet UITextField *FirstNameField;
+@property (weak, nonatomic) IBOutlet UITextField *LastNameField;
+@property (weak, nonatomic) IBOutlet UITextField *EmailField;
+@property (weak, nonatomic) IBOutlet UITextField *PasswordField;
+@property (weak, nonatomic) IBOutlet UITextField *RetypePasswordField;
+- (IBAction)CreateButton:(id)sender;
+@property (weak, nonatomic) IBOutlet UINavigationBar *NavBar;
 
 @end
