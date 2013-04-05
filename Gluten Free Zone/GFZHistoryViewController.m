@@ -7,9 +7,11 @@
 //
 
 #import "GFZHistoryViewController.h"
+#import "Reachability.h"
 
-@interface GFZHistoryViewController ()
-
+@interface GFZHistoryViewController (){
+    Reachability *internetReachableFoo;
+}
 @end
 
 @implementation GFZHistoryViewController
@@ -26,16 +28,14 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.connection = YES;
     tableData = [[NSMutableArray alloc] init];
     self.navigationItem.leftBarButtonItem = nil;
-    NSUserDefaults *ns = [NSUserDefaults standardUserDefaults];
-    NSLog(@"User email: %@", [ns valueForKey:@"user_email"]);
+    self.tableView.delegate = self;
+    //NSUserDefaults *ns = [NSUserDefaults standardUserDefaults];
+    //NSLog(@"User email: %@", [ns valueForKey:@"user_email"]);
+
     [self fetchEntries];
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
 - (void)didReceiveMemoryWarning
@@ -44,13 +44,16 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle {
+    NSLog(@"delete this entry");
+}
+
 - (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response {
     NSLog(@"Got a response");
 }
 
 - (void)connection:(NSURLConnection *)conn didReceiveData:(NSData *)data
 {
-    NSLog(@"Got some data");
     // Add the incoming chunk of data to the container we are keeping
     // The data always comes in the correct order
     [jsonData appendData:data];
@@ -60,59 +63,25 @@
 {
     [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO
      ];	
-    NSLog(@"Connection finished loading");
-    // Create the parser object with the data received from the web service
-   // NSXMLParser *parser = [[NSXMLParser alloc] initWithData:jsonData];
-    
-    // Give it a delegate
-    //[parser setDelegate:self];
-    
-    // Tell it to start parsing - the document will be parsed and
-    // the delegate of NSXMLParser will get all of its delegate messages
-    // sent to it before this line finishes execution - it is blocking
-    //[parser parse];
-    
-    NSString *response = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
-    NSLog(@"Retrieved data: %@", response);
     NSError *error = [[NSError alloc] init];
     NSMutableDictionary *JSON = [NSJSONSerialization JSONObjectWithData: jsonData options: NSJSONReadingMutableContainers error: &error];
-    NSLog(@"using dictionary: %@", [JSON valueForKey:@"history"]);
     NSMutableDictionary *items = [JSON valueForKey:@"history"];
-    NSLog(@"using history: %@", [items valueForKey:@"1"]);
     int count = [[items valueForKey:@"count"] intValue];
-    NSLog(@"number of items: %d", count);
     
     for (int i=0; i<count;i++) {
-        NSLog(@"Theres an object here");
+
         NSString *key = [NSString stringWithFormat:@"%d",i];
         NSDictionary *item = [items valueForKey:key];
-        NSLog(@"Item: %@", [item valueForKey:@"date"]);
         [tableData addObject:item];
     }
     // Reload the table.. for now, the table will be empty.
     [[self tableView] reloadData];
-    
-    //NSLog(@"%@\n %@\n %@\n", channel, [channel title], [channel infoString]);
 }
 
 - (void)connection:(NSURLConnection *)conn
   didFailWithError:(NSError *)error
 {
-        NSLog(@"Connection failed");
-    // Release the jsonData object, we're done with it
-    //jsonData = nil;
-    
-    // Grab the description of the error object passed to us
-    NSString *errorString = [NSString stringWithFormat:@"Fetch failed: %@",
-                             [error localizedDescription]];
-    
-    // Create and show an alert view with this error displayed
-    UIAlertView *av = [[UIAlertView alloc] initWithTitle:@"Error"
-                                                 message:errorString
-                                                delegate:nil
-                                       cancelButtonTitle:@"OK"
-                                       otherButtonTitles:nil];
-    [av show];
+    NSLog(@"Connection failed");    
 }
 
 - (NSInteger)tableView:(UITableView *)tableView
@@ -134,8 +103,8 @@
     NSDictionary *item = [tableData objectAtIndex:[indexPath row]];
     [[cell textLabel] setText:[item valueForKey:@"product_title"]];
     cell.detailTextLabel.text = [item valueForKey:@"date"];
-    bool result = [item valueForKey:@"result"];
-    if(result){
+    NSString *result = [item valueForKey:@"result"];
+    if([result isEqualToString:@"1"]){
         UIImage *image = [UIImage imageNamed:@"check.png"];
         [[cell imageView] setImage:image];
     }else{
@@ -150,8 +119,30 @@
     return cell;
 }
 
+- (IBAction)SignOutButton:(id)sender {
+    [self.navigationController popToRootViewControllerAnimated:YES];
+}
+
+- (IBAction)RefreshDataButton:(id)sender {
+    [self testInternetConnection];
+    if(self.connection){
+        [tableData removeAllObjects];
+        [[self tableView] reloadData];
+        [self fetchEntries];
+    }else{
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"No Connection!"
+                                                        message:@"Please ensure you have a valid data connection and try again."
+                                                       delegate:nil
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles:nil];
+        [alert show];
+    }
+}
+
 - (void)fetchEntries
 {
+    [self testInternetConnection];
+    if(self.connection){
     // Create a new data container for the stuff that comes back from the service
     jsonData = [[NSMutableData alloc] init];
     
@@ -171,8 +162,40 @@
         // Add code here to do background processing
         [connection start];
     });
-    
+    }else{
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"No Connection!"
+                                                        message:@"Please ensure you have a valid data connection and try again."
+                                                       delegate:nil
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles:nil];
+        [alert show];
+    }
 
 }
 
+// Checks if we have an internet connection or not
+- (void)testInternetConnection
+{
+    internetReachableFoo = [Reachability reachabilityWithHostname:@"www.google.ca"];
+    
+    // Internet is reachable
+    internetReachableFoo.reachableBlock = ^(Reachability*reach)
+    {
+        // Update the UI on the main thread
+        self.connection = YES;
+    };
+    
+    // Internet is not reachable
+    internetReachableFoo.unreachableBlock = ^(Reachability*reach)
+    {
+        // Update the UI on the main thread
+        self.connection = NO;
+    };
+    
+    [internetReachableFoo startNotifier];
+}
+
+- (void)viewDidUnload {
+    [super viewDidUnload];
+}
 @end

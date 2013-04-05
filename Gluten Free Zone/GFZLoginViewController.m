@@ -33,7 +33,6 @@
     self.PasswordInputField.delegate = self;
     self.PasswordInputField.text = @"";
     self.data = [[NSMutableData alloc] initWithCapacity: 1024];
-    NSLog(@"data size: %d", self.data.length);
 }
 
 - (void)didReceiveMemoryWarning
@@ -82,8 +81,8 @@
 - (IBAction)CreateAccountButton:(id)sender {
     NSLog(@"Create Account");
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard_iPhone" bundle:nil];
-    UITabBarController *viewController = [storyboard instantiateViewControllerWithIdentifier:@"CreateAccountView"];
-    
+    GFZCreateAccountViewController *viewController = [storyboard instantiateViewControllerWithIdentifier:@"CreateAccountView"];
+    viewController.delegate = self;
     [self.navigationController presentModalViewController:viewController animated:YES];
 }
 
@@ -191,7 +190,7 @@
 // Checks if we have an internet connection or not
 - (void)testInternetConnection
 {
-    internetReachableFoo = [Reachability reachabilityWithHostname:@"www.google.com"];
+    internetReachableFoo = [Reachability reachabilityWithHostname:@"www.google.ca"];
     
     // Internet is reachable
     internetReachableFoo.reachableBlock = ^(Reachability*reach)

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		721C127316FA27E8001E5CB9 /* GFZScanViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 721C127216FA27E8001E5CB9 /* GFZScanViewController.mm */; };
 		723EEF89170355ED00AF1D11 /* GFZVerifyAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 723EEF88170355ED00AF1D11 /* GFZVerifyAccountViewController.m */; };
+		723F4CF2170F428900956CE2 /* gfz_test.png in Resources */ = {isa = PBXBuildFile; fileRef = 723F4CF1170F428900956CE2 /* gfz_test.png */; };
 		7244962A16FA16C800DC4665 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7244962916FA16C800DC4665 /* UIKit.framework */; };
 		7244962C16FA16C800DC4665 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7244962B16FA16C800DC4665 /* Foundation.framework */; };
 		7244962E16FA16C800DC4665 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7244962D16FA16C800DC4665 /* CoreGraphics.framework */; };
@@ -78,6 +79,7 @@
 		721C127216FA27E8001E5CB9 /* GFZScanViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GFZScanViewController.mm; sourceTree = "<group>"; };
 		723EEF87170355ED00AF1D11 /* GFZVerifyAccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GFZVerifyAccountViewController.h; sourceTree = "<group>"; };
 		723EEF88170355ED00AF1D11 /* GFZVerifyAccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GFZVerifyAccountViewController.m; sourceTree = "<group>"; };
+		723F4CF1170F428900956CE2 /* gfz_test.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gfz_test.png; sourceTree = "<group>"; };
 		7244962516FA16C800DC4665 /* Gluten Free Zone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Gluten Free Zone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7244962916FA16C800DC4665 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		7244962B16FA16C800DC4665 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -180,6 +182,7 @@
 		7244961A16FA16C800DC4665 = {
 			isa = PBXGroup;
 			children = (
+				723F4CF1170F428900956CE2 /* gfz_test.png */,
 				72A5115C16FCC83A003F5A3F /* SystemConfiguration.framework */,
 				72A5115A16FCC833003F5A3F /* QuartzCore.framework */,
 				72A5115816FCC82B003F5A3F /* CoreMedia.framework */,
@@ -413,6 +416,7 @@
 				72E2D6C61700AD880051F636 /* check.png in Resources */,
 				72E2D6C81700B5C60051F636 /* new-scan-red.png in Resources */,
 				72799150170223F300B64211 /* Question-Mark.jpg in Resources */,
+				723F4CF2170F428900956CE2 /* gfz_test.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

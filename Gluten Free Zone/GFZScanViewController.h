@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "ScanditSDKOverlayController.h"
 
-@interface GFZScanViewController : UIViewController <ScanditSDKOverlayControllerDelegate>
+@interface GFZScanViewController : UIViewController <ScanditSDKOverlayControllerDelegate, NSURLConnectionDelegate>
 - (IBAction)NewScanButton:(id)sender;
 - (IBAction)SignOutButton:(id)sender;
 @property (weak, nonatomic) IBOutlet UIImageView *ScanResultImage;
@@ -18,4 +18,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *ResultsLabel;
 @property (strong, nonatomic) UINavigationController *navController;
 @property (weak, nonatomic) IBOutlet UIButton *NewScanButtonProperty;
+@property (strong, nonatomic) NSMutableData *data;
+@property BOOL connection;
 @end

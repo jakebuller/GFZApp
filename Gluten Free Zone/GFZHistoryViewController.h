@@ -8,9 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface GFZHistoryViewController : UITableViewController <NSURLConnectionDelegate>{
+@interface GFZHistoryViewController : UITableViewController <NSURLConnectionDelegate, UITableViewDelegate>{
     NSMutableData *jsonData;
     NSMutableArray *tableData;
 }
+@property BOOL connection;
+- (IBAction)SignOutButton:(id)sender;
+- (IBAction)RefreshDataButton:(id)sender;
 - (void)fetchEntries;
 @end

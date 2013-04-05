@@ -10,7 +10,7 @@
 @interface GFZLoginViewController : UIViewController <UITextFieldDelegate, NSURLConnectionDelegate>
 - (IBAction)SignInButton:(id)sender;
 - (IBAction)CreateAccountButton:(id)sender;
-@property (weak, nonatomic) IBOutlet UITextField *EmailInputField;
+@property (weak, nonatomic) IBOutlet UITextField *EmailInputField;		
 @property (weak, nonatomic) IBOutlet UITextField *PasswordInputField;
 @property (strong, nonatomic) NSMutableData *data;
 @property BOOL connection;
