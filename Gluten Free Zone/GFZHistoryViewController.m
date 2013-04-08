@@ -33,9 +33,15 @@
     self.navigationItem.leftBarButtonItem = nil;
     self.tableView.delegate = self;
     //NSUserDefaults *ns = [NSUserDefaults standardUserDefaults];
-    //NSLog(@"User email: %@", [ns valueForKey:@"user_email"]);
+    //NSLog(@"User email: %@", [ns valueForKey:@"user_email"])
+}
 
+-(void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    [tableData removeAllObjects];
     [self fetchEntries];
+    [[self tableView] reloadData];
 }
 
 - (void)didReceiveMemoryWarning
@@ -106,6 +112,9 @@
     NSString *result = [item valueForKey:@"result"];
     if([result isEqualToString:@"1"]){
         UIImage *image = [UIImage imageNamed:@"check.png"];
+        [[cell imageView] setImage:image];
+    }else if([result isEqualToString:@"2"]){
+        UIImage *image = [UIImage imageNamed:@"q.png"];
         [[cell imageView] setImage:image];
     }else{
         UIImage *image = [UIImage imageNamed:@"x.png"];

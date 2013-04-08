@@ -168,6 +168,8 @@
     NSLog(@"%@", data);
     if([data isEqualToString:@"0"]){
         self.created = YES;
+        NSUserDefaults *ns = [NSUserDefaults standardUserDefaults];
+        [ns setValue: self.EmailField.text forKey:@"user_email"];
         [self dismissModalViewControllerAnimated:YES];
     }else if([data isEqualToString: @"1"]){
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Email Address Unavailable!"

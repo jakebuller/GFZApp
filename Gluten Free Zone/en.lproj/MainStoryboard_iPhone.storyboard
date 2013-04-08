@@ -374,7 +374,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="1YX-u3-pjD">
-                                <rect key="frame" x="69" y="331" width="183" height="49"/>
+                                <rect key="frame" x="69" y="349" width="183" height="49"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" backgroundImage="new-scan.png">
@@ -388,22 +388,22 @@
                                     <action selector="NewScanButton:" destination="HYF-lZ-JKU" eventType="touchUpInside" id="BzX-A6-Mmj"/>
                                 </connections>
                             </button>
-                            <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Scan a product" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="KzS-Se-d0v">
-                                <rect key="frame" x="31" y="57" width="258" height="39"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="34"/>
+                            <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="UPC: " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="WZt-S6-KDD">
+                                <rect key="frame" x="0.0" y="308" width="320" height="39"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="deviceRGB"/>
                                 <nil key="highlightedColor"/>
                                 <color key="shadowColor" red="0.090196080509999998" green="0.34901961679999999" blue="0.45098042490000001" alpha="1" colorSpace="deviceRGB"/>
                             </label>
                             <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Gluten Free!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="fHg-4R-Qmn">
-                                <rect key="frame" x="31" y="104" width="258" height="49"/>
+                                <rect key="frame" x="0.0" y="115" width="320" height="49"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="34"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="deviceRGB"/>
                                 <nil key="highlightedColor"/>
                                 <color key="shadowColor" red="0.090196080509999998" green="0.34901961679999999" blue="0.45098042490000001" alpha="1" colorSpace="deviceRGB"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" id="Oro-7T-aE3">
-                                <rect key="frame" x="40" y="180" width="240" height="128"/>
+                                <rect key="frame" x="40" y="173" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <navigationBar contentMode="scaleToFill" barStyle="blackOpaque" id="GfM-an-lwW">
@@ -420,6 +420,14 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" editable="NO" text="Scan a product" textAlignment="center" id="dhT-WX-Q7u">
+                                <rect key="frame" x="14" y="49" width="286" height="72"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                     </view>
@@ -428,7 +436,8 @@
                         <outlet property="NewScanButtonProperty" destination="1YX-u3-pjD" id="Jkb-7b-qbr"/>
                         <outlet property="ResultsLabel" destination="fHg-4R-Qmn" id="Oyd-vr-ZIP"/>
                         <outlet property="ScanResultImage" destination="Oro-7T-aE3" id="GHC-rB-UXv"/>
-                        <outlet property="ScanResultText" destination="KzS-Se-d0v" id="X1L-n4-jGt"/>
+                        <outlet property="ScanResultText" destination="dhT-WX-Q7u" id="mQC-2O-5pJ"/>
+                        <outlet property="upcCode" destination="WZt-S6-KDD" id="czH-u6-c4d"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Il2-HS-Bo8" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -521,7 +530,8 @@
                 <relationship kind="outlet" name="NewScanButtonProperty" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="ResultsLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="ScanResultImage" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="ScanResultText" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="ScanResultText" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="upcCode" candidateClass="UILabel"/>
             </relationships>
         </class>
         <class className="GFZVerifyAccountViewController" superclassName="UIViewController">

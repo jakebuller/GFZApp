@@ -33,7 +33,8 @@
 		7244967016FA20C700DC4665 /* GFZCreateAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7244966F16FA20C700DC4665 /* GFZCreateAccountViewController.m */; };
 		7254C2C0170490700029FF00 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 7254C2BF170490700029FF00 /* Reachability.m */; };
 		7254C2C1170490700029FF00 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 7254C2BF170490700029FF00 /* Reachability.m */; };
-		72799150170223F300B64211 /* Question-Mark.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7279914F170223F300B64211 /* Question-Mark.jpg */; };
+		727BE2B717132444000B9D22 /* q.png in Resources */ = {isa = PBXBuildFile; fileRef = 727BE2B617132444000B9D22 /* q.png */; };
+		727BE2B817132444000B9D22 /* q.png in Resources */ = {isa = PBXBuildFile; fileRef = 727BE2B617132444000B9D22 /* q.png */; };
 		72A5110916FCB537003F5A3F /* GFZMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72A5110816FCB537003F5A3F /* GFZMainViewController.m */; };
 		72A5110D16FCB718003F5A3F /* GFZHistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72A5110C16FCB718003F5A3F /* GFZHistoryViewController.m */; };
 		72A5114216FCC72F003F5A3F /* beep.wav in Resources */ = {isa = PBXBuildFile; fileRef = 72A5113216FCC72F003F5A3F /* beep.wav */; };
@@ -110,7 +111,7 @@
 		7244966F16FA20C700DC4665 /* GFZCreateAccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GFZCreateAccountViewController.m; sourceTree = "<group>"; };
 		7254C2BE170490700029FF00 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		7254C2BF170490700029FF00 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
-		7279914F170223F300B64211 /* Question-Mark.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Question-Mark.jpg"; sourceTree = "<group>"; };
+		727BE2B617132444000B9D22 /* q.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = q.png; sourceTree = "<group>"; };
 		72A5110716FCB537003F5A3F /* GFZMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GFZMainViewController.h; sourceTree = "<group>"; };
 		72A5110816FCB537003F5A3F /* GFZMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GFZMainViewController.m; sourceTree = "<group>"; };
 		72A5110B16FCB718003F5A3F /* GFZHistoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GFZHistoryViewController.h; sourceTree = "<group>"; };
@@ -282,7 +283,7 @@
 		7244966916FA191900DC4665 /* images */ = {
 			isa = PBXGroup;
 			children = (
-				7279914F170223F300B64211 /* Question-Mark.jpg */,
+				727BE2B617132444000B9D22 /* q.png */,
 				72E2D6C71700B5C60051F636 /* new-scan-red.png */,
 				72E2D6C51700AD880051F636 /* check.png */,
 				72E2D6C31700AD860051F636 /* x.png */,
@@ -415,8 +416,8 @@
 				72E2D6C41700AD860051F636 /* x.png in Resources */,
 				72E2D6C61700AD880051F636 /* check.png in Resources */,
 				72E2D6C81700B5C60051F636 /* new-scan-red.png in Resources */,
-				72799150170223F300B64211 /* Question-Mark.jpg in Resources */,
 				723F4CF2170F428900956CE2 /* gfz_test.png in Resources */,
+				727BE2B717132444000B9D22 /* q.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -425,6 +426,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7244965B16FA16CC00DC4665 /* InfoPlist.strings in Resources */,
+				727BE2B817132444000B9D22 /* q.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

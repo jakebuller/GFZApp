@@ -14,10 +14,12 @@
 - (IBAction)SignOutButton:(id)sender;
 @property (weak, nonatomic) IBOutlet UIImageView *ScanResultImage;
 @property (strong, nonatomic) ScanditSDKBarcodePicker *picker;
-@property (weak, nonatomic) IBOutlet UILabel *ScanResultText;
 @property (weak, nonatomic) IBOutlet UILabel *ResultsLabel;
+@property (weak, nonatomic) IBOutlet UITextView *ScanResultText;
+
 @property (strong, nonatomic) UINavigationController *navController;
 @property (weak, nonatomic) IBOutlet UIButton *NewScanButtonProperty;
 @property (strong, nonatomic) NSMutableData *data;
+@property (weak, nonatomic) IBOutlet UILabel *upcCode;
 @property BOOL connection;
 @end

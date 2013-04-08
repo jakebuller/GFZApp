@@ -84,6 +84,8 @@
     [self setScanResultText:nil];
     [self setResultsLabel:nil];
     [self setNewScanButtonProperty:nil];
+    [self setUpcCode:nil];
+    [self setScanResultText:nil];
     [super viewDidUnload];
 }
 
@@ -100,9 +102,7 @@
         // if you want to do something once the animation finishes, put it here
     }];
     self.ScanResultImage.image = image;
-    self.ScanResultText.text = @"This product is";
-    self.ScanResultText.hidden = NO;
-    self.ResultsLabel.text = @"gluten free!";
+    self.ResultsLabel.text = @"is gluten free!";
     self.ResultsLabel.hidden = NO;
     self.NewScanButtonProperty.hidden = NO;
 }
@@ -120,9 +120,7 @@
         // if you want to do something once the animation finishes, put it here
     }];
     self.ScanResultImage.image = image;
-    self.ScanResultText.text = @"This product is";
-    self.ScanResultText.hidden = NO;
-    self.ResultsLabel.text = @"not gluten free!";
+    self.ResultsLabel.text = @"is not gluten free!";
     self.ResultsLabel.hidden = NO;
     self.NewScanButtonProperty.hidden = NO;
 }
@@ -131,7 +129,7 @@
     self.ScanResultImage.hidden = NO;
     UIImage *buttonImage = [UIImage imageNamed: @"new-scan-red.png"];
     [self.NewScanButtonProperty setImage:buttonImage forState: UIControlStateNormal];
-    UIImage *image = [UIImage imageNamed: @"Question-Mark.jpg"];
+    UIImage *image = [UIImage imageNamed: @"q.png"];
     self.ScanResultImage.transform = CGAffineTransformMakeScale(0.01, 0.01);
     [UIView animateWithDuration:0.5 delay:0.3 options:UIViewAnimationOptionCurveEaseOut animations:^{
         // animate it to the identity transform (100% scale)
@@ -140,9 +138,7 @@
         // if you want to do something once the animation finishes, put it here
     }];
     self.ScanResultImage.image = image;
-    self.ScanResultText.text = @"Oops!";
-    self.ScanResultText.hidden = NO;
-    self.ResultsLabel.text = @"No results";
+    self.ResultsLabel.text = @"Product not found";
     self.ResultsLabel.hidden = NO;
     self.NewScanButtonProperty.hidden = NO;
 }
@@ -153,6 +149,8 @@
     self.NewScanButtonProperty.hidden = YES;
 }
 -(void)getScanResult: (NSString *) barcode {
+    self.upcCode.text = [NSString stringWithFormat:@"UPC: %@", barcode];
+    self.upcCode.hidden = NO;
     if(self.connection){
         NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL: [NSURL URLWithString:@"http://hopper.wlu.ca/~bull6280/gfz/php/gfz_get_scan_result.php"]];
         [request setHTTPMethod: @"POST"];
@@ -198,10 +196,14 @@
     [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
     NSString *response = [[NSString alloc] initWithData:self.data encoding:NSUTF8StringEncoding];
     NSLog(@"%@", response);
+    NSArray* x = [response componentsSeparatedByString: @":"];
+    response = [x objectAtIndex: 0];
+    self.ScanResultText.text = [x objectAtIndex:1];
+    self.ScanResultText.hidden = NO;
     // Do anything you want with it
-    if([response isEqualToString:@"0"]){
+    if([response isEqualToString:@"1"]){
         [self showSafeResult];
-    }else if([response isEqualToString:@"1"]){
+    }else if([response isEqualToString:@"0"]){
         [self showNotSafeResult];
     }else{
         [self showNoResult];

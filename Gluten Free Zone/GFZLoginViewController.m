@@ -33,6 +33,14 @@
     self.PasswordInputField.delegate = self;
     self.PasswordInputField.text = @"";
     self.data = [[NSMutableData alloc] initWithCapacity: 1024];
+
+}
+
+-(void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    NSUserDefaults *ns = [NSUserDefaults standardUserDefaults];
+    [ns removeObjectForKey:@"user_email"];
 }
 
 - (void)didReceiveMemoryWarning
